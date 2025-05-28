@@ -1,6 +1,5 @@
 import { Nav, Row, Col, Container, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 
 import hackImg1 from "../assets/img/hackathon-img1.png";
@@ -10,8 +9,8 @@ import hackImg3 from "../assets/img/hackathon-img3.png";
 import schoolImg1 from "../assets/img/school-img1.png";
 import schoolImg2 from "../assets/img/school-img2.png";
 import schoolImg3 from "../assets/img/school-img3.png";
-import schoolImg4 from "../assets/img/school-img4.png";
 
+import placeholder from "../assets/img/placeholder.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -67,10 +66,16 @@ export const Projects = () => {
             link: 'https://github.com/ChangKuoman/UTEC_COMPUTERS'
         },
         {
-            title: 'SENKU',
+            title: 'Análisis UTEC',
             description: 'Description of project one',
-            imgUrl: schoolImg4,
-            link: 'https://github.com/ChangKuoman/Senku'
+            imgUrl: placeholder,
+            link: 'https://example.com'
+        },
+        {
+            title: 'AWS Puntaje',
+            description: 'Description of project one',
+            imgUrl: placeholder,
+            link: 'https://example.com'
         }
     ];
 
@@ -83,7 +88,7 @@ export const Projects = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                                 <h2>Projects</h2>
-                                <p>Lorem Ipsum</p>
+                                <p>Explore my projects, hackathon contributions, and school projects below.</p>
                                 <Tab.Container id="projects-tabs" defaultActiveKey="second">
                                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                         <Nav.Item>

@@ -54,7 +54,7 @@ export const Banner = () => {
                                 <span className="tagline">Welcome to My Portfolio</span>
                                 <h1>{`Hi I'm Samanta Chang `}<span className='wrap'>{text}</span></h1>
                                 <p>I'm a computer scientist with a passion for developing innovative solutions that make a difference. I specialize in software development, data analysis, and machine learning.</p>
-                                <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                                <button onClick={() => window.open('https://www.linkedin.com/in/chang-kuoman/', '_blank')}>Let's Connect <ArrowRightCircle size={25} /></button>
                             </div>
                         }
                         </TrackVisibility>
