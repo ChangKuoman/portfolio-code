@@ -10,14 +10,14 @@ export const Footer = () => {
             <Container>
                 <Row className="align-item-center">
                     <Col size={12} sm={6}>
-                        <img src={logo} alt="Logo" />
+                        <span className='nav-name-bigger'>Samanta Chang</span>
                     </Col>
                     <Col size={12} sm={6} className="text-center text-sm-end">
-                        <div className='social-icon'>
-                            <a href=""><img src={navIcon1} /></a>
-                            <a href=""><img src={navIcon2} /></a>
-                            <a href=""><img src={navIcon3} /></a>
-                        </div>
+                    <div className="social-icon">
+                        <a href="https://www.linkedin.com/in/chang-kuoman/" target="_blank"><img src={navIcon1} alt=""/></a>
+                        <a href="https://github.com/ChangKuoman" target="_blank"><img src={navIcon2} alt=""/></a>
+                        <a href="https://www.instagram.com/chang.kuoman" target="_blank"><img src={navIcon3} alt=""/></a>
+                    </div>
                         <p>CopyRight 2025. All Rights Reserved</p>
                     </Col>
                 </Row>

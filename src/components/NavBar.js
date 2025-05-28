@@ -31,7 +31,7 @@ export const NavBar = () => {
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-            <img src={logo} alt="Logo" />
+            <span className='nav-name'>Samanta Chang</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" >
             <span className="navbar-toggler-icon"></span>
@@ -56,13 +56,10 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#"><img src={navIcon1} alt=""/></a>
-              <a href="#"><img src={navIcon2} alt=""/></a>
-              <a href="#"><img src={navIcon3} alt=""/></a>
+              <a href="https://www.linkedin.com/in/chang-kuoman/" target="_blank"><img src={navIcon1} alt=""/></a>
+              <a href="https://github.com/ChangKuoman" target="_blank"><img src={navIcon2} alt=""/></a>
+              <a href="https://www.instagram.com/chang.kuoman" target="_blank"><img src={navIcon3} alt=""/></a>
             </div>
-            <button className="vvd" onClick={() => console.log('connecct')}>
-                <span>Let's Connect</span>
-            </button>
           </span>
         </Navbar.Collapse>
       </Container>

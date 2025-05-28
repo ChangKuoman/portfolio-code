@@ -2,8 +2,16 @@ import { Nav, Row, Col, Container, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+
+import hackImg1 from "../assets/img/hackathon-img1.png";
+import hackImg2 from "../assets/img/hackathon-img2.png";
+import hackImg3 from "../assets/img/hackathon-img3.png";
+
+import schoolImg1 from "../assets/img/school-img1.png";
+import schoolImg2 from "../assets/img/school-img2.png";
+import schoolImg3 from "../assets/img/school-img3.png";
+import schoolImg4 from "../assets/img/school-img4.png";
+
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -11,35 +19,59 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: 'Project One',
+            title: 'Foca-Bot',
             description: 'Description of project one',
-            imgUrl: projImg1
+            imgUrl: projImg1,
+            link: 'https://github.com/ChangKuoman/discord-bot'
+        }
+    ];
+
+    const hackathons = [
+        {
+            title: 'TopAIcal',
+            description: 'Description of project one',
+            imgUrl: hackImg1,
+            link: 'https://devpost.com/software/topaical'
         },
         {
-            title: 'Project One',
+            title: 'Ayllu',
             description: 'Description of project one',
-            imgUrl: projImg2
+            imgUrl: hackImg2,
+            link: 'https://devpost.com/software/ayllu'
         },
         {
-            title: 'Project One',
+            title: 'TWIDDDS',
             description: 'Description of project one',
-            imgUrl: projImg3
+            imgUrl: hackImg3,
+            link: 'https://devpost.com/software/twiddds'
+        }
+    ];
+
+    const school = [
+        {
+            title: 'MNIST++',
+            description: 'Description of project one',
+            imgUrl: schoolImg1,
+            link: 'https://github.com/CS1103/MNISTplusplus'
         },
         {
-            title: 'Project One',
+            title: 'MentorMatch',
             description: 'Description of project one',
-            imgUrl: projImg1
+            imgUrl: schoolImg2,
+            link: 'https://github.com/ChangKuoman/MentorMatch'
         },
         {
-            title: 'Project One',
+            title: 'UTEC Computers',
             description: 'Description of project one',
-            imgUrl: projImg2
+            imgUrl: schoolImg3,
+            link: 'https://github.com/ChangKuoman/UTEC_COMPUTERS'
         },
         {
-            title: 'Project One',
+            title: 'SENKU',
             description: 'Description of project one',
-            imgUrl: projImg3
-        },
+            imgUrl: schoolImg4,
+            link: 'https://github.com/ChangKuoman/Senku'
+        }
     ];
 
     return (
@@ -52,16 +84,16 @@ export const Projects = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                                 <h2>Projects</h2>
                                 <p>Lorem Ipsum</p>
-                                <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                                <Tab.Container id="projects-tabs" defaultActiveKey="second">
                                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                         <Nav.Item>
-                                            <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                            <Nav.Link eventKey="first">Projects</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item>
-                                            <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                            <Nav.Link eventKey="second">Hackathons</Nav.Link>
                                         </Nav.Item>
                                         <Nav.Item>
-                                            <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                            <Nav.Link eventKey="third">School Projects</Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -79,8 +111,34 @@ export const Projects = () => {
                                                 }
                                             </Row>
                                         </Tab.Pane>
-                                        <Tab.Pane eventKey={"second"}>LI</Tab.Pane>
-                                        <Tab.Pane eventKey={"third"}>LI</Tab.Pane>
+                                        <Tab.Pane eventKey={"second"}>
+                                            <Row>
+                                                {
+                                                    hackathons.map((project, index) => {
+                                                        return (
+                                                            <ProjectCard
+                                                                key={index}
+                                                                {...project}
+                                                                />
+                                                        )
+                                                    })
+                                                }
+                                            </Row>
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey={"third"}>
+                                            <Row>
+                                                {
+                                                    school.map((project, index) => {
+                                                        return (
+                                                            <ProjectCard
+                                                                key={index}
+                                                                {...project}
+                                                                />
+                                                        )
+                                                    })
+                                                }
+                                            </Row>
+                                        </Tab.Pane>
                                     </Tab.Content>
                                 </Tab.Container>
                             </div>}
@@ -88,7 +146,6 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" src={colorSharp2}></img>
         </section>
     )
 }
